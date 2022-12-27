@@ -1,0 +1,22 @@
+<h2>List champions</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>image</th>
+            <th>Action 1</th>
+            <th>Action 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let champion of champions">
+            <td>{{champion.nameChampion}}</td>
+            <td>{{champion.priceChampion}}</td>
+            <td><img src="{{champion.imageChampion}}" alt="" width="200px"></td>
+            <td><button (click)="deleteAChampion(champion.idChampion)" class="btn btn-info">Delete</button></td>
+            <td><button (click)="seeDetails(champion.idChampion)" class="btn btn-primary">Details</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Add a champion</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="">Name of champion</label>
+      <input type="text" name="name" id="name" class="form-control" [(ngModel)]="champion.nameChampion">
+    </div>
+
+    <div class="form-group">
+      <label for="">Price of champion</label>
+      <input type="number" name="price" id="price" class="form-control" [(ngModel)]="champion.priceChampion">
+    </div>
+
+    <div class="form-group">
+      <label for="">Image of champion</label>
+      <input type="text" name="image" id="image" class="form-control" [(ngModel)]="champion.imageChampion">
+    </div>
+
+    <button class="btn btn-success" (click)="saveChampion()">Save</button>
+
+  </form>
+</div>
